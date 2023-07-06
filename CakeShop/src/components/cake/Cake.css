@@ -1,0 +1,14 @@
+.cakeContainer {
+    height: 400px;
+    background-color: #E3DFFD;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap:5px;
+  }
+  .cakeimg{
+    border-radius: 20px;
+  }
+  
