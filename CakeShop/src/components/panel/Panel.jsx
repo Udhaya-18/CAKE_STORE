@@ -11,7 +11,7 @@ const Panel = (props) => {
           height="50"
           width="50"
         />
-        <h1>Cake</h1>
+        <h1 id="caketitle">CakeCraft</h1>
       </div>
       <div className="panelRight">
         <a onClick={addcakeForm}>Add cake</a>

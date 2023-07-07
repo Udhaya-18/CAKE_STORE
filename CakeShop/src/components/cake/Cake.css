@@ -1,5 +1,5 @@
 .cakeContainer {
-    height: 400px;
+    height: 450px;
     background-color: #E3DFFD;
     border-radius: 5%;
     display: flex;
@@ -12,3 +12,11 @@
     border-radius: 20px;
   }
   
+  .cakeContainer div{
+    margin-top:15px;
+    display:flex;
+    justify-content: space-evenly;
+    width:65%;
+  }
+
+ 

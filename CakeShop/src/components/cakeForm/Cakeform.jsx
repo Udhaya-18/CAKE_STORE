@@ -22,7 +22,6 @@ function Cakeform() {
       <h1>Add Cake</h1>
       <form>
         <input type="text" placeholder="Cake Name" />
-        <input type="text" placeholder="Flavor" />
         <input type="text" placeholder="Weight in units" />
         <input type="text" placeholder="Price" />
         <input type="text" placeholder="Image" />
