@@ -1,6 +1,9 @@
 import Panel from "./components/panel/Panel";
 import Cake from "./components/cake/Cake";
 import "./App.css"
+import { useState } from "react";
+import Cakeform from "./components/cakeForm/Cakeform";
+
 export default function App() {
   const cakes = [{
     image: "https://cdn.shopify.com/s/files/1/0034/8343/5072/products/Web_ChocolateTruffle.jpg?v=1681449307",
@@ -32,16 +35,27 @@ export default function App() {
     price: "₹300" 
   }
 ]
-
+  const [addcake,setAddcake]=useState(false)
+  const addcakeForm=()=>{
+    setAddcake(true)
+  }
+  const closecakeForm=()=>{
+    setAddcake(false)
+  }
   return (
     <div className="App">
-      <Panel />
+      <Panel addcakeForm={addcakeForm} closecakeForm={closecakeForm}/>
+      {
+        addcake ? 
+        <Cakeform/>
+      : 
       <div className="cakePanel">
       {
         cakes.map((item)=> <Cake list={item}/>)
       }
       </div>
-    
+      }
+
     </div>
   );
 }
