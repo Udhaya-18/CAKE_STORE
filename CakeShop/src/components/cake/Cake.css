@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
 .cakeContainer {
     height: 450px;
     background-color: #E3DFFD;
@@ -17,6 +19,15 @@
     display:flex;
     justify-content: space-evenly;
     width:65%;
+  }
+  .cakeContainer h1{
+    font-family: 'Chakra Petch', sans-serif;
+    color:#9336B4;
+  }
+  #price{
+    
+    font-weight: bold;
+    font-size: 20px;
   }
 
  

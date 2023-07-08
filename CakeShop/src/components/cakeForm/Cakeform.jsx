@@ -1,34 +1,57 @@
 import React, { useState } from "react";
 import "./Cakeform.css"
-function Cakeform() {
+function Cakeform(props) {
+  const {addCake}=props
 //   const [headingText, setHeadingText] = useState("Add Products");
-  const [isMousedOver, setMouseOver] = useState(false);
+  // const [isMousedOver, setMouseOver] = useState(false);
+  const [name,setName]=useState('')
+  const [image,setImage]=useState('')
+  const [units,setUnits]=useState('')
+  const [price,setPrice]=useState('')
 
-  function handleClick(event) {
-    event.preventDefault();
-    setHeadingText("Added");
+  const handleNameChange=(e)=>{
+    setName(e.target.value)
+  }
+  const handleImageChange=(e)=>{
+    setImage(e.target.value)
+  }
+  const handleUnitsChange=(e)=>{
+    setUnits(e.target.value)
+  }
+  const handlePriceChange=(e)=>{
+    setPrice(e.target.value)
   }
 
-  function handleMouseOver() {
-    setMouseOver(true);
-  }
-
-  function handleMouseOut() {
-    setMouseOver(false);
-  }
-
+  const handleFormSubmit=(e)=>{
+    e.preventDefault()
+    
+    if(!image || !name || !units || !price){
+        toast.error("Please fill the details ")
+        return; 
+    }
+    const data={
+        image,
+        name,
+        units,
+        price
+    }
+    addCake(data)
+    setName('')
+    setImage('')
+    setUnits('')
+    setPrice('')
+    
+}
   return (
     <div className="container">
-      <h1>Add Cake</h1>
+      <h2>Add Cake</h2>
       <form>
-        <input type="text" placeholder="Cake Name" />
-        <input type="text" placeholder="Weight in units" />
-        <input type="text" placeholder="Price" />
-        <input type="text" placeholder="Image" />
+        <input type="text" placeholder="Cake Name" onChange={handleNameChange}  />
+        <input type="text" placeholder="Weight in units" onChange={handleUnitsChange}  />
+        <input type="text" placeholder="Price" onChange={handlePriceChange} />
+        <input type="text" placeholder="Image" onChange={handleImageChange} />
         <button
-          onClick={handleClick}
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
+          onClick={handleFormSubmit}
         >
           Add Cake
         </button>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+
 .container{
     height:500px;
     text-align: center;
@@ -17,10 +20,17 @@
     border-radius: 5px;
     text-align: center;
 }
+.container input:focus{
+    background-color: ghostwhite;
+}
 .container button{
     border: none;
     background-color: #E5D1FA;
     padding:15px;
     margin:20px;
     border-radius: 5px;
+}
+.container h2{
+    font-size: 35px;
+    font-family: 'Chakra Petch', sans-serif;
 }

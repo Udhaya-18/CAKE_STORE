@@ -1,7 +1,7 @@
 import "./Panel.css"
 
 const Panel = (props) => {
-  const {addcakeForm,closecakeForm}=props
+  const {opencakeForm,closecakeForm}=props
   return (
     <div className="panel">
       <div className="panelLeft">
@@ -14,7 +14,7 @@ const Panel = (props) => {
         <h1 id="caketitle">CakeCraft</h1>
       </div>
       <div className="panelRight">
-        <a onClick={addcakeForm}>Add cake</a>
+        <a onClick={opencakeForm}>Add cake</a>
         <a onClick={closecakeForm}>Cakes</a>
       </div>
     </div>
