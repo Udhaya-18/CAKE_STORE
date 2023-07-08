@@ -44,7 +44,7 @@ const CAKES = [{
 
 
 export default function App() {
-  const [cakes,setCakes]=useState(CAKES)
+  const [cakes,setCakes]=useState([])
 
   const addCake=(newObj)=>{
     newObj.id=nanoid();
@@ -53,7 +53,7 @@ export default function App() {
   const getData=async()=>{
     const res=await fetch('http://localhost:2000/cakes/')
     const json=await res.join()
-    setExpenses(json)
+    setCakes(json)
   }
 
   useEffect(()=>{
